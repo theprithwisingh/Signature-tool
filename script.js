@@ -13,9 +13,16 @@ const retrieveBtn = document.getElementById('retrieveBtn');
 ctx.fillStyle = backgroundColorPicker.value;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+// Event listeners for mouse events
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', stopDrawing);
 canvas.addEventListener('mousemove', draw);
+
+// Event listeners for touch events
+canvas.addEventListener('touchstart', startDrawingTouch);
+canvas.addEventListener('touchend', stopDrawing);
+canvas.addEventListener('touchmove', drawTouch);
+
 clearBtn.addEventListener('click', clearCanvas);
 saveBtn.addEventListener('click', saveCanvas);
 retrieveBtn.addEventListener('click', retrieveCanvas);
@@ -24,6 +31,12 @@ backgroundColorPicker.addEventListener('change', updateBackgroundColor);
 function startDrawing(e) {
   drawing = true;
   draw(e);
+}
+
+function startDrawingTouch(e) {
+  e.preventDefault();
+  drawing = true;
+  drawTouch(e);
 }
 
 function stopDrawing() {
@@ -41,6 +54,20 @@ function draw(e) {
   ctx.stroke();
   ctx.beginPath();
   ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+}
+
+function drawTouch(e) {
+  e.preventDefault();
+  if (!drawing) return;
+  const touch = e.touches[0];
+  ctx.lineWidth = fontSizeSelector.value;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = textColorPicker.value;
+
+  ctx.lineTo(touch.clientX - canvas.offsetLeft, touch.clientY - canvas.offsetTop);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(touch.clientX - canvas.offsetLeft, touch.clientY - canvas.offsetTop);
 }
 
 function clearCanvas() {
