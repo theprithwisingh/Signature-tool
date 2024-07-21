@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/heading.png" />
+  <meta name="description" content="EasySign is a free online signature tool that allows you to create, save, and download digital signatures. Customize text color, background color, and font size with ease. Perfect for personal and professional use.">
+  <meta name="keywords" content="online signature, digital signature, free signature tool, create signature, save signature, download signature, customize signature, signature generator">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="EasySign - Online Signature Tool">
+  <meta property="og:description" content="EasySign is a free online signature tool that allows you to create, save, and download digital signatures. Customize text color, background color, and font size with ease.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EasySign - Online Signature Tool">
+  <meta name="twitter:description" content="EasySign is a free online signature tool that allows you to create, save, and download digital signatures. Customize text color, background color, and font size with ease.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasySign</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="controls">
+    <label for="">Text Color 
+    <input type="color" id="textColor" value="#ff0000"></label>
+
+    <label for="">canvas background color
+    <input type="color" id="backgroundColor" value="#ffffff"></label>
+
+    <label for="">font size
+    <select id="fontSize">
+      <option value="5">5px</option>
+      <option value="10">10px</option>
+      <option value="15">15px</option>
+      <option value="20">20px</option>
+      <option value="25">25px</option>
+      <option value="30">30px</option>
+    </select></label>
+  </div>
+  <canvas id="signatureCanvas" width="800" height="450"></canvas>
+  <div class="buttons">
+    <button id="clearBtn" class="red-btn">Clear</button>
+    <button id="saveBtn" class="green-btn">Save & download</button>
+    <button id="retrieveBtn" class="yellow-btn">Retrieve saved signature</button>
+  </div>
+</div>  
+  <script src="script.js"></script>
+</body>
+</html>

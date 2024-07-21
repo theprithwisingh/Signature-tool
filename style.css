@@ -1,0 +1,116 @@
+/* .container h1{
+    margin: auto;
+    text-align: center;
+
+}
+.container{
+    margin: auto;
+    width: 800px;
+    height: 680px;
+    border:  2px solid black;
+}
+.display{
+    margin: 10px auto;
+    width: 90%;
+    height: 75%;
+    border:  2px solid black;
+}
+.setting-2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.setting-2 button{
+    padding:6px 12px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.setting-2 .clear{
+    background-color: #ff1e1e;
+    color: white;
+}
+.setting-2 .save{
+    background-color: #007e04;
+    color: white;
+}
+.setting-2 .retrieve{
+    background-color: #cea500;
+    color: white;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+
+  }
+.container{
+    margin: auto;
+    width: 800px;
+    height: 680px;
+    border:  2px solid rgb(0, 0, 0);
+}
+  .controls {
+    margin: 20px;
+  }
+  
+  canvas {
+    border: 1px solid #000;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  button{
+    padding: 15px 25px;
+    margin: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 3px;
+    /* padding: 6px 12px; */
+  }
+  
+  .red-btn {
+    background-color: #f00;
+  }
+  
+  .green-btn {
+    background-color: #0f0;
+  }
+  
+  .yellow-btn {
+    background-color: #ff0;
+    color: #000;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .controls input[type="color"],
+  .controls select {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
